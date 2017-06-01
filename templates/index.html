@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>friends</title>
+</head>
+<body>
+<h1>Friends:</h1>
+<p>{{friends}}</p>
+<table>
+<th>Name</th>
+<th>Age</th>
+<th>Friend Science</th>
+<th></th>
+<tbody>
+{% for i in friends %}
+    <tr>
+        <td>{{ i['name'] }}</td>
+        <td>{{ i['age'] }}</td>
+        <td>{{ i['date1'] }}</td>
+        <td>{{ i['date2'] }}</td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+<h1>Add a Friend:</h1>
+<form action="/submit" method="post">
+	Name:<input type="text" name="name">
+	Age:<input type="text" name="age">
+	<input type="submit" name="submit">
+</form>
+</body>
+</html>
